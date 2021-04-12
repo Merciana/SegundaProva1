@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HomeFragment">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <AutoCompleteTextView
+                android:id="@+id/autoComplete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:completionHint="Pesquisa"
+                android:completionThreshold="1"
+                android:hint="ID do contato"/>
+
+            <MultiAutoCompleteTextView
+                android:id="@+id/multiautocomplete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:completionHint="Adicione aqui os dados"
+                android:completionThreshold="1"
+                android:hint="Dados do Contato"/>
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contatos"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerviewContatos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/contatos_card"/>
+
+        </LinearLayout>
+        <com.google.android.material.navigation.NavigationView
+            app:menu="@menu/drawer_menu"
+            app:headerLayout="@layout/drawer_header"
+            android:id="@+id/navView"
+            android:layout_gravity="start"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

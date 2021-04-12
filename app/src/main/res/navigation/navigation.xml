@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation.xml"
+    app:startDestination="@id/homeFragment">
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.segundaprova.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/sobreFragment2"
+        android:name="com.example.segundaprova.menu.SobreFragment"
+        android:label="fragment_sobre"
+        tools:layout="@layout/fragment_sobre" >
+        <action
+            android:id="@+id/action_sobreFragment2_to_perguntaFragment"
+            app:destination="@id/perguntaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/formularioFragment"
+        android:name="com.example.segundaprova.menu.formularioFragment"
+        android:label="fragment_formulario"
+        tools:layout="@layout/fragment_formulario" >
+        <action
+            android:id="@+id/action_formularioFragment_to_okFragment"
+            app:destination="@id/okFragment" />
+        <action
+            android:id="@+id/action_formularioFragment_to_errouFragment"
+            app:destination="@id/errouFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/perguntaFragment"
+        android:name="com.example.segundaprova.menu.PerguntaFragment"
+        android:label="PerguntaFragment" >
+        <action
+            android:id="@+id/action_perguntaFragment_to_formularioFragment"
+            app:destination="@id/formularioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/okFragment"
+        android:name="com.example.segundaprova.menu.okFragment"
+        android:label="fragment_ok"
+        tools:layout="@layout/fragment_ok" >
+        <action
+            android:id="@+id/action_okFragment_to_formularioFragment"
+            app:destination="@id/formularioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/errouFragment"
+        android:name="com.example.segundaprova.menu.errouFragment"
+        android:label="fragment_errou"
+        tools:layout="@layout/fragment_errou" >
+        <action
+            android:id="@+id/action_errouFragment_to_formularioFragment"
+            app:destination="@id/formularioFragment" />
+    </fragment>
+</navigation>

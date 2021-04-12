@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">SegundaProva</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="menu">Menu do aplicativo</string>
+    <string name="pergunta">Formulário!</string>
+    <string name="iniciar">iniciar</string>
+    <string name="ok">Muito Bem!</string>
+    <string name="tentar">Tentar Novamente</string>
+    <string name="errou">Na próxima!</string>
+    <string name="tentar2">Tentar Novamente</string>
+    <string name="Ajuda">Ajuda sobre o aplicativo</string>
+    <string name="pesquisa">Pesquisa de contatos</string>
+    <string name="nada">N.A.D.A</string>
+    <string name="obs">Só observando a funcionalidade</string>
+    <string name="GPergunta">O que estás procurando nesse aplicativo? Como posso ajudar?</string>
+    <string name="responde">Responder</string>
+    <item name="imagContatos" type="id" />
+</resources>
